@@ -1,0 +1,17 @@
+@mixin desktop {
+  @media (min-width: 950px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+// Structure
+@mixin flex($direction: column, $justify: center, $align: center) {
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
