@@ -2,15 +2,18 @@
 @import '../../sass/_mixins';
 // @import '../../sass/style.scss';
 
+.img-wrapper {
+}
+
 .animate-img {
   animation: img-zoom infinite 20s linear alternate;
+  transform-origin: 100% 0;
+
   position: relative;
   opacity: 0.8;
-  min-height: 90vh;
-  max-height: 90vh;
-  width: 100%;
-
-  transform-origin: 100% 0;
+  height: 100%;
+  width: 100vw;
+  max-width: 100%;
   //   animation: immortalkenburns 20000ms linear 0s infinite alternate;
 }
 

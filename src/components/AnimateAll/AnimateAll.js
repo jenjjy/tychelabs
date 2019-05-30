@@ -5,19 +5,21 @@ import AnimateImg from '../AnimateImg';
 import AnimateBtn from '../AnimateBtn';
 
 const AnimateAll = ({ props, children, link }) => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <AnimateImg img="https://wallpapercave.com/wp/0OBRwFi.jpg" />
+  const cat = 'https://wallpapercave.com/wp/0OBRwFi.jpg';
+  const abstract =
+    'https://wallpik.com/wp-content/uploads/2019/04/stock-cool-cool-background-stock.jpg';
 
-        <div className="slider-container">
-          <h1 className="slide-text">{children}</h1>
-          <div className="divider" />
-          <AnimateBtn link="https://tychelabs.io/coming-soon/">
-            Learn more
-          </AnimateBtn>
-        </div>
-      </header>
+  return (
+    <div className="animate-all">
+      <AnimateImg className="img" img={cat} />
+
+      <div className="slider-container">
+        <h1 className="slide-text">{children}</h1>
+        <div className="divider" />
+        <AnimateBtn link="https://tychelabs.io/coming-soon/">
+          Learn more
+        </AnimateBtn>
+      </div>
     </div>
   );
 };

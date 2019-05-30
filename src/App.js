@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <AnimateAll>Coming Soon...</AnimateAll>
+        <AnimateAll>Coming soon...</AnimateAll>
       </header>
     </div>
   );
