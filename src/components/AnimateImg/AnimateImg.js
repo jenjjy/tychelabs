@@ -6,7 +6,6 @@ const AnimateBtn = ({ props, img }) => {
   return (
     <div {...props}>
       <img src={img} className="animate-img" alt="" {...props} />
-      {/* {children} */}
     </div>
   );
 };

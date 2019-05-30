@@ -1,21 +1,17 @@
 .animate-btn {
   background: #000;
   border: $border;
+  cursor: pointer;
   font-family: inherit;
   font-size: 1rem;
-
-  cursor: pointer;
-  padding: 12px 55px;
-  display: inline-block;
-  margin: 15px 15px;
-  letter-spacing: 1px;
   font-weight: 700;
-  outline: none;
-  // position: relative;
+  letter-spacing: 1px;
+  margin: 15px 0;
+  padding: 12px 55px;
+  text-transform: capitalize;
+
   transition-duration: 0.7s;
   transition-timing-function: ease;
-
-  text-transform: capitalize;
 
   a {
     color: #fff;
