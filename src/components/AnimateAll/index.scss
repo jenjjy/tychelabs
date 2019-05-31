@@ -1,37 +1,22 @@
-@import '../../sass/_variables';
-@import '../../sass/mixins';
-@import '../../sass/button';
-@import '../../sass/animate';
-// @import 'style.scss';
-
-.animate-all {
-  min-height: 90vh;
-  max-height: 90vh;
-  height: auto;
-  //   width: 100vw;
-}
+@import '../../sass/style';
 
 .img {
   position: relative;
-  //   height: 600px;
 }
 .slider-container {
+  display: flex;
+  @include flex(column, center, flex-start);
   position: absolute;
   top: 60%;
   left: 15%;
-  /* width: 100%; 
-    * - Don't add. Will make width too wide.  */
+  /* width: 100%; -> Don't add. Will make width too wide.*/
 }
 
 .slide-text {
-  //   animation-name: slidein;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-
   color: #fff;
   font-size: 25px;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 65px;
   text-align: left;
   text-shadow: 1px 1px 5px #353535;
   margin: 0;
@@ -40,21 +25,12 @@
 
   @include tablet {
     font-size: 30px;
-    line-height: 90px;
+    line-height: 80px;
     letter-spacing: 1px;
   }
 
   @include desktop {
     font-size: 60px;
     line-height: 100px;
-  }
-}
-
-@keyframes slidein {
-  0% {
-    margin-left: 100%;
-  }
-  100% {
-    margin-left: 0%;
   }
 }

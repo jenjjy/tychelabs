@@ -1,21 +1,16 @@
-@import '../../sass/_variables';
-@import '../../sass/_mixins';
-// @import '../../sass/style.scss';
+@import '../../sass/style';
 
 .img-wrapper {
-  max-width: 100vw;
+  //   width: 100vw;
 }
 
 .animate-img {
   animation: img-zoom 20s linear 0s infinite alternate;
   transform-origin: 100% 0;
-
   position: relative;
   opacity: 0.8;
   height: 100vh;
   width: auto;
-
-  //   animation: immortalkenburns 20000ms linear 0s infinite alternate;
 
   @include desktop {
     height: 100%;

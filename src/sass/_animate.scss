@@ -2,12 +2,9 @@
  * Text
  */
 .bounce {
-  animation-name: bounce;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  animation: bounce 2.2s ease-out 0s;
   transform-origin: center bottom;
   animation-fill-mode: both;
-  //   width: 100%;
 }
 @keyframes bounce {
   0% {
@@ -19,20 +16,21 @@
     transform: translate3d(0);
   }
   50%,
-  70%,
-  85%,
+  63%,
+  75%,
+  88%,
   100% {
     animation-timing-function: cubic-bezier(0.21, 0.54, 0.37, 1.13);
     transform: translateZ(0);
   }
-  58%,
-  60% {
-    transform: translate3d(0, -38px, 0);
+  68%,
+  70% {
+    transform: translate3d(0, -30px, 0);
   }
-  75% {
+  80% {
     transform: translate3d(0, -18px, 0);
   }
-  90% {
+  94% {
     transform: translate3d(0, -4px, 0);
   }
 }
@@ -40,17 +38,20 @@
 /*
  * Divider
  */
-
 .divider {
-  animation-name: div-slide;
-  animation-timing-function: ease-out;
-  animation-delay: 0.9s;
-  animation-duration: 1s;
+  animation: div-slide 1s ease-out 1.2s;
   animation-fill-mode: both;
-
-  width: 100px;
-  height: 3px;
   background-color: $color-main;
+  margin-bottom: 2px;
+  height: 3px;
+  width: 80px;
+
+  @include tablet {
+    width: 100px;
+  }
+  @include desktop {
+    width: 120px;
+  }
 }
 @keyframes div-slide {
   0% {
@@ -67,18 +68,18 @@
 }
 
 /*
- * Button
+ * Button Wiggle
  */
 .btn-appear {
-  animation: voila 1s linear 1.9s;
+  animation: voila 0.7s ease 2s;
   animation-fill-mode: both;
-  width: fit-content;
+  // width: fit-content;
 }
 @keyframes voila {
   0% {
     opacity: 0;
     transform: scale(0.1) rotate(30deg);
-    transform-origin: center;
+    transform-origin: center bottom;
   }
   50% {
     transform: rotate(-10deg);

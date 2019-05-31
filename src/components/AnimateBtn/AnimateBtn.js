@@ -6,8 +6,10 @@ const AnimateBtn = props => {
   console.log(props);
   return (
     <div className="btn-wrapper" {...props}>
-      <button className="">
-        <a href={props.link}>{props.children}</a>
+      <button className="btn-slider">
+        <a href={props.link} className="btn-content">
+          {props.children}
+        </a>
       </button>
     </div>
   );

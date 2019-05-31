@@ -1,8 +1,10 @@
-@import '../../sass/_variables';
-@import '../../sass/mixins';
-@import '../../sass/button';
-// @import 'style.scss';
+@import '../../sass/style.scss';
 
-.btn-wrapper {
-  text-align: left;
+.btn-slider {
+  z-index: 5;
+}
+
+.btn-content {
+  border: $border;
+  z-index: 5;
 }

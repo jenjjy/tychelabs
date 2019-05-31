@@ -1,73 +1,21 @@
-.animate-btn {
-  background: linear-gradient(45deg, $light 50%, $dark 50%);
-  border: $border;
-  border-radius: 0;
-  cursor: pointer;
-
-  //   animation: slide 20s linear alternate;
-  //   background: $dark;
-
-  font-family: inherit;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 15px 0;
-  padding: 10px 30px;
-  text-transform: capitalize;
-  width: fit-content;
-  animation-fill-mode: both;
-  transition: 0.7s ease;
-  a {
-    color: $light;
-    font-size: 0.9rem;
-    text-decoration: none;
-
-    @include tablet {
-      font-size: 1rem;
-    }
-  }
-
-  @include tablet {
-    padding: 12px 55px;
-  }
-
-  &:hover {
-    animation: btn-fill 1s linear 0s;
-    animation-fill-mode: forwards;
-
-    a {
-      color: $dark;
-    }
-  }
-}
-
-@keyframes btn-fill {
-  0% {
-    background: red;
-  }
-  100% {
-    background: yellow;
-  }
-}
-
-//
 button {
   background: transparent;
-  border: $border;
+  border: 0;
+
   border-radius: 0;
   color: $light; /*For IE*/
   cursor: pointer;
 
-  //   font-weight: 700;
   letter-spacing: 1px;
   margin: 15px 0;
   padding: 0;
   position: relative;
+  text-transform: capitalize;
 
   a {
     color: $light;
     font-size: 0.8rem;
     font-weight: 700;
-    // text-decoration: none;
 
     @include tablet {
       font-size: 0.9rem;
@@ -77,17 +25,16 @@ button {
 button > a {
   display: inline-block;
   padding: 10px 30px;
-  background: linear-gradient(45deg, $dark 50%, $light 50%);
+  background: linear-gradient(90deg, $dark 50%, $light 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: 0.7s ease;
+
   @include tablet {
     padding: 11px 55px;
   }
 }
 button:after {
   content: '';
-
   position: absolute;
   top: 0;
   bottom: 0;
@@ -101,13 +48,11 @@ button > a,
 button:after {
   background-size: 300%;
   background-position: 100%;
-  transition: 2s;
+  transition: 2.5s ease;
 }
 
 button:hover > a,
 button:hover:after {
   background-position: 0;
-
-  color: $dark;
-  /*For IE*/
+  color: $dark; /*For IE*/
 }

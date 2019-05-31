@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.scss';
-import AnimateBtn from './components/AnimateBtn';
 import AnimateAll from './components/AnimateAll';
 
 function App() {
