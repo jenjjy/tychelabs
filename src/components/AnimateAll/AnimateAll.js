@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './index.scss';
 import lightbulb from '../../images/lightbulb.jpg';
 import catSq from '../../images/catonrails.jpg';

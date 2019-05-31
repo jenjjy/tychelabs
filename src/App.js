@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import AnimateBtn from './components/AnimateBtn';
 import AnimateAll from './components/AnimateAll';

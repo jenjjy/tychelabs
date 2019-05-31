@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './index.scss';
 
-const AnimateBtn = (props, { img }) => {
+const AnimateImg = props => {
   console.log(props);
   return (
     <div className="img-wrapper">
@@ -10,4 +11,8 @@ const AnimateBtn = (props, { img }) => {
   );
 };
 
-export default AnimateBtn;
+AnimateImg.propTypes = {
+  img: PropTypes.string.isRequired
+};
+
+export default AnimateImg;
