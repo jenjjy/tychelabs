@@ -1,4 +1,15 @@
+.btn-wrapper {
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+
+  &:hover {
+    width: 250px;
+  }
+}
+
 .animate-btn {
+  animation: slide 20s linear alternate;
   background: #000;
   border: $border;
   cursor: pointer;
@@ -10,8 +21,13 @@
   padding: 10px 30px;
   text-transform: capitalize;
 
-  transition-duration: 0.7s;
-  transition-timing-function: ease;
+  //   transition-property: width;
+  //   transition-duration: 2s;
+  //   transition-timing-function: ease;
+  //   transition-delay: 1s;
+  //   transition-duration: 0.7s;
+
+  animation-fill-mode: both;
 
   a {
     color: #fff;
@@ -21,5 +37,13 @@
   @include tablet {
     font-size: 1.1rem;
     padding: 12px 55px;
+  }
+
+  &:hover {
+    background: #fff;
+
+    a {
+      color: #000;
+    }
   }
 }

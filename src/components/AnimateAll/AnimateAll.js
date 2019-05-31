@@ -15,7 +15,7 @@ const AnimateAll = ({ props, children, link }) => {
 
       <div className="slider-container">
         <h1 className="slide-text">{children}</h1>
-        <div className="divider" />
+        <div className="divider lightSpeedIn" />
         <AnimateBtn link="https://tychelabs.io/coming-soon/">
           Learn more
         </AnimateBtn>

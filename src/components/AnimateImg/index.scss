@@ -3,6 +3,7 @@
 // @import '../../sass/style.scss';
 
 .img-wrapper {
+  max-width: 100vw;
 }
 
 .animate-img {
@@ -11,10 +12,16 @@
 
   position: relative;
   opacity: 0.8;
-  height: 100%;
-  width: 100vw;
-  max-width: 100%;
+  height: 100vh;
+  width: auto;
+
   //   animation: immortalkenburns 20000ms linear 0s infinite alternate;
+
+  @include desktop {
+    height: 100%;
+    width: 100vw;
+    // max-width: 100%;
+  }
 }
 
 @keyframes img-zoom {
