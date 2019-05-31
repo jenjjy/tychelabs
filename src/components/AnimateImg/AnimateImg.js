@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './index.scss';
 
-const AnimateBtn = ({ props, img }) => {
+const AnimateBtn = (props, { img }) => {
   console.log(props);
   return (
-    <div className="img-wrapper" {...props}>
-      <img src={img} className="animate-img" alt="" {...props} />
+    <div className="img-wrapper">
+      <img src={props.img} className="animate-img" alt="" />
     </div>
   );
 };

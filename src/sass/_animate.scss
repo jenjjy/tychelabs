@@ -1,0 +1,93 @@
+/*
+ * Text
+ */
+.bounce {
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  transform-origin: center bottom;
+  animation-fill-mode: both;
+  //   width: 100%;
+}
+@keyframes bounce {
+  0% {
+    margin-left: 100%;
+    transform: translate3d(100%, 0, 0);
+  }
+  30% {
+    margin-left: 0%;
+    transform: translate3d(0);
+  }
+  50%,
+  70%,
+  85%,
+  100% {
+    animation-timing-function: cubic-bezier(0.21, 0.54, 0.37, 1.13);
+    transform: translateZ(0);
+  }
+  58%,
+  60% {
+    transform: translate3d(0, -38px, 0);
+  }
+  75% {
+    transform: translate3d(0, -18px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+/*
+ * Divider
+ */
+
+.divider {
+  animation-name: div-slide;
+  animation-timing-function: ease-out;
+  animation-delay: 0.9s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+  width: 100px;
+  height: 3px;
+  background-color: $color-main;
+}
+@keyframes div-slide {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0);
+  }
+}
+
+/*
+ * Button
+ */
+.btn-appear {
+  animation: voila 1s linear 1.8s;
+  animation-fill-mode: both;
+  width: fit-content;
+}
+@keyframes voila {
+  0% {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center;
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

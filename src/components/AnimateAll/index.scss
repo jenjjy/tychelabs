@@ -1,6 +1,7 @@
 @import '../../sass/_variables';
 @import '../../sass/mixins';
 @import '../../sass/button';
+@import '../../sass/animate';
 // @import 'style.scss';
 
 .animate-all {
@@ -23,8 +24,8 @@
 }
 
 .slide-text {
-  animation-name: slidein;
-  animation-duration: 1s;
+  //   animation-name: slidein;
+  animation-duration: 2s;
   animation-timing-function: ease-out;
 
   color: #fff;
@@ -48,26 +49,6 @@
     line-height: 100px;
   }
 }
-.bounce {
-  animation-name: bounce;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  transform-origin: center bottom;
-  animation-fill-mode: both;
-  //   width: 100%;
-}
-
-.divider {
-  animation-name: div-slide;
-  animation-timing-function: ease-out;
-  animation-delay: 0.9s;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-
-  width: 100px;
-  height: 3px;
-  background-color: $color-main;
-}
 
 @keyframes slidein {
   0% {
@@ -75,47 +56,5 @@
   }
   100% {
     margin-left: 0%;
-  }
-}
-@keyframes bounce {
-  0% {
-    margin-left: 100%;
-    transform: translate3d(100%, 0, 0);
-  }
-  20% {
-    margin-left: 0%;
-    transform: translate3d(0);
-  }
-
-  50%,
-  65%,
-  85%,
-  100% {
-    animation-timing-function: cubic-bezier(0.21, 0.54, 0.37, 1.13);
-    transform: translateZ(0);
-  }
-  55%,
-  60% {
-    transform: translate3d(0, -35px, 0);
-  }
-  78% {
-    transform: translate3d(0, -18px, 0);
-  }
-  90% {
-    transform: translate3d(0, -4px, 0);
-  }
-}
-
-@keyframes div-slide {
-  0% {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate3d(0);
   }
 }

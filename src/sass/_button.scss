@@ -20,13 +20,7 @@
   margin: 15px 0;
   padding: 10px 30px;
   text-transform: capitalize;
-
-  //   transition-property: width;
-  //   transition-duration: 2s;
-  //   transition-timing-function: ease;
-  //   transition-delay: 1s;
-  //   transition-duration: 0.7s;
-
+  width: fit-content;
   animation-fill-mode: both;
 
   a {
@@ -40,10 +34,52 @@
   }
 
   &:hover {
-    background: #fff;
+    // animation: btn-fill 1s linear 0s;
+    // animation-fill-mode: forwards;
 
     a {
       color: #000;
     }
+  }
+}
+
+.btn-slider {
+  transition: 0.7s ease;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.btn-filler {
+  &:after {
+    background: #fff;
+    color: #000;
+
+    top: 0;
+    left: 0;
+    transition: 0.7s ease-in;
+    height: 100%;
+    width: 0%;
+  }
+
+  &:hover {
+    animation: btn-fill 1s linear 0s;
+    animation-fill-mode: forwards;
+
+    a {
+      color: #000;
+    }
+  }
+}
+
+@keyframes btn-fill {
+  0% {
+    background: red;
+  }
+  100% {
+    background: yellow;
   }
 }
