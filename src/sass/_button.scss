@@ -1,12 +1,12 @@
-.btn-wrapper {
-  transition-property: width;
-  transition-duration: 2s;
-  transition-timing-function: ease;
+// .btn-wrapper {
+//   transition-property: width;
+//   transition-duration: 2s;
+//   transition-timing-function: ease;
 
-  &:hover {
-    width: 250px;
-  }
-}
+//   &:hover {
+//     width: 250px;
+//   }
+// }
 
 .animate-btn {
   animation: slide 20s linear alternate;

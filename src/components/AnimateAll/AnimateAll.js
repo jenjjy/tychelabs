@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.scss';
 import lightbulb from '../../images/lightbulb.jpg';
+import catSq from '../../images/catonrails.jpg';
 import AnimateImg from '../AnimateImg';
 import AnimateBtn from '../AnimateBtn';
 
@@ -11,10 +12,10 @@ const AnimateAll = ({ props, children, link }) => {
 
   return (
     <div className="animate-all">
-      <AnimateImg className="img" img={cat} />
+      <AnimateImg className="img" img={lightbulb} />
 
       <div className="slider-container">
-        <h1 className="slide-text">{children}</h1>
+        <h1 className="slide-text bounce">Coming soon...</h1>
         <div className="divider lightSpeedIn" />
         <AnimateBtn link="https://tychelabs.io/coming-soon/">
           Learn more

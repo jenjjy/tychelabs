@@ -18,11 +18,12 @@
   position: absolute;
   top: 60%;
   left: 15%;
-  width: 100%;
+  /* width: 100%; 
+    * - Don't add. Will make width too wide.  */
 }
 
 .slide-text {
-  animation-name: slideIn;
+  animation-name: slidein;
   animation-duration: 1s;
   animation-timing-function: ease-out;
 
@@ -31,7 +32,7 @@
   font-weight: 600;
   line-height: 60px;
   text-align: left;
-  text-shadow: 2px 1px 5px #353535;
+  text-shadow: 1px 1px 5px #353535;
   margin: 0;
   padding-bottom: 10px;
   width: 100%;
@@ -47,50 +48,65 @@
     line-height: 100px;
   }
 }
+.bounce {
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  transform-origin: center bottom;
+  animation-fill-mode: both;
+  //   width: 100%;
+}
 
 .divider {
-  animation-name: divSlide;
-  animation-delay: 1.5s;
+  animation-name: div-slide;
+  animation-timing-function: ease-out;
+  animation-delay: 0.9s;
   animation-duration: 1s;
-  //   animation-direction: reverse;
   animation-fill-mode: both;
 
   width: 100px;
   height: 3px;
   background-color: $color-main;
 }
-.lightSpeedIn {
-  animation-name: lightSpeedIn;
-  animation-timing-function: ease-out;
-}
 
-.learn-more {
-  a {
-    font-weight: 700;
-  }
-}
-
-@keyframes slideIn {
+@keyframes slidein {
   0% {
     margin-left: 100%;
   }
-
   100% {
     margin-left: 0%;
   }
 }
-
-@keyframes divSlide {
+@keyframes bounce {
   0% {
+    margin-left: 100%;
+    transform: translate3d(100%, 0, 0);
+  }
+  20% {
     margin-left: 0%;
+    transform: translate3d(0);
   }
 
+  50%,
+  65%,
+  85%,
   100% {
-    margin-left: 100%;
+    animation-timing-function: cubic-bezier(0.21, 0.54, 0.37, 1.13);
+    transform: translateZ(0);
+  }
+  55%,
+  60% {
+    transform: translate3d(0, -35px, 0);
+  }
+  78% {
+    transform: translate3d(0, -18px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
   }
 }
 
-@keyframes lightSpeedIn {
+@keyframes div-slide {
   0% {
     opacity: 0;
     transform: translate3d(100%, 0, 0);
@@ -100,6 +116,6 @@
   }
 
   100% {
-    // transform: translateZ(0);
+    transform: translate3d(0);
   }
 }
