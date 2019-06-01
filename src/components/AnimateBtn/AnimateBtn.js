@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './index.scss';
 
 const AnimateBtn = props => {
-  console.log(props);
   return (
     <div className="btn-wrapper" {...props}>
       <button className="btn-slider">

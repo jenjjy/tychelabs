@@ -14,7 +14,7 @@ const AnimateAll = props => {
 
       <div className="slider-container">
         <h1 className="slide-text bounce">Coming soon...</h1>
-        <div className="divider lightSpeedIn" />
+        <div className="divider" />
         <AnimateBtn
           className="btn-appear"
           link="https://tychelabs.io/coming-soon/"
