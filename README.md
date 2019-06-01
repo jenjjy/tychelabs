@@ -7,3 +7,7 @@ Created reusable React components of the background image and button for the lan
 ## Technologies
 
 React, SCSS
+
+## Learning
+
+Doing animations with CSS.
