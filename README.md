@@ -1,4 +1,4 @@
-# Tychelabs
+# Code Test
 
 Created reusable React components of the background image and button for the landing page of tychelabs. No libraries used.
 
